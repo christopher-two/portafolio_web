@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -9,36 +10,15 @@ import { cn } from '@/lib/utils';
 import { ThemeToggle } from './theme-toggle';
 
 const navItems = [
-  { href: '#trabajos', label: 'Trabajos' },
-  { href: '#sobre-mi', label: 'Sobre mi' },
-  { href: '#blog', label: 'Blog' },
-  { href: '#override', label: 'Override' },
+  { href: '/', label: 'Trabajos' },
+  { href: '/sobre-mi', label: 'Sobre mi' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/override', label: 'Override' },
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('trabajos');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => document.querySelector(item.href) as HTMLElement);
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          const sectionId = section.getAttribute('id');
-          if (sectionId) {
-             setActiveSection(sectionId);
-             break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const pathname = usePathname();
 
   const SlashIcon = () => (
     <svg width="1em" height="1em" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block h-3 w-3">
@@ -56,11 +36,11 @@ export function Header() {
               href={item.href}
               className={cn(
                 "transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-foreground",
-                activeSection === item.href.substring(1) ? "bg-secondary/80 text-foreground" : ""
+                pathname === item.href ? "bg-secondary/80 text-foreground" : ""
               )}
             >
               {item.label}
-              {activeSection === item.href.substring(1) && (
+              {pathname === item.href && (
                 <span className="ml-2 inline-flex items-center justify-center w-5 h-5 rounded-md bg-muted/50 border border-border/50">
                   <SlashIcon />
                 </span>

@@ -1,109 +1,37 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
-export default function Home() {
+export default function TrabajosPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main>
-        <section
-          id="home"
-          className="relative flex h-screen w-full flex-col items-center justify-center text-center"
-        >
-          <div className="container px-4 md:px-6">
-            <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Christopher Two
-            </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-              Multiplatform Developer
-            </p>
-          </div>
-          <Link href="#trabajos" className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-              <ArrowDown className="h-6 w-6 text-muted-foreground" />
-              <span className="sr-only">Scroll to next section</span>
-          </Link>
-        </section>
-
-        <section id="trabajos" className="w-full py-20 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Trabajos</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Aquí se mostrarán mis proyectos y trabajos destacados.
-                </p>
-              </div>
-            </div>
-            <div className="container mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-2 lg:gap-12">
-               <Card>
-                 <CardContent className="p-4">
-                   <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
-                   <h3 className="text-lg font-bold mt-4">Project 1</h3>
-                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
-                 </CardContent>
-               </Card>
-               <Card>
-                 <CardContent className="p-4">
-                   <Image src="https://placehold.co/600x400.png" data-ai-hint="modern design" alt="Project 2" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
-                   <h3 className="text-lg font-bold mt-4">Project 2</h3>
-                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
-                 </CardContent>
-               </Card>
+      <main className="container mx-auto flex-1 px-4 py-24 md:px-6">
+        <section id="trabajos" className="w-full">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Trabajos</h1>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Aquí se mostrarán mis proyectos y trabajos destacados.
+              </p>
             </div>
           </div>
-        </section>
-
-        <section id="sobre-mi" className="w-full py-20 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Sobre mi</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Un poco sobre mi trayectoria y habilidades.
-                </p>
-              </div>
-               <div className="mx-auto max-w-3xl py-12 text-left space-y-4 text-muted-foreground">
-                  <p>Content for Sobre mi will go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-                  <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
-               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="blog" className="w-full py-20 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Blog</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Pensamientos, artículos y tutoriales.
-                </p>
-              </div>
-              <div className="mx-auto max-w-5xl py-12 text-center text-muted-foreground">
-                <p>Blog posts will be displayed here soon.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="override" className="w-full py-20 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Override</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Información sobre el concepto 'Override'.
-                </p>
-              </div>
-               <div className="mx-auto max-w-3xl py-12 text-center text-muted-foreground">
-                <p>Content for Override section will be available soon.</p>
-              </div>
-            </div>
+          <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-2 lg:gap-12">
+             <Card>
+               <CardContent className="p-4">
+                 <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
+                 <h3 className="text-lg font-bold mt-4">Project 1</h3>
+                 <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+               </CardContent>
+             </Card>
+             <Card>
+               <CardContent className="p-4">
+                 <Image src="https://placehold.co/600x400.png" data-ai-hint="modern design" alt="Project 2" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
+                 <h3 className="text-lg font-bold mt-4">Project 2</h3>
+                 <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+               </CardContent>
+             </Card>
           </div>
         </section>
       </main>
