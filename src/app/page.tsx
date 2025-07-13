@@ -140,23 +140,24 @@ export default function HomePage() {
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-              {projects.map((project, index) => (
-                <div
-                  key={project.title}
-                  className={
-                    index < 2 ? 'lg:col-span-2' : ''
-                  }
-                >
-                  <ProjectCard
-                    platform={project.platform}
-                    title={project.title}
-                    logo={project.logo as 'smartphone' | 'globe' | 'monitor'}
-                    description={project.description}
-                    technologies={project.technologies}
-                    projectUrl={project.projectUrl}
-                  />
-                </div>
-              ))}
+              {projects.map((project, index) => {
+                let colSpan = '';
+                if (index === 0 || index === 3) {
+                  colSpan = 'lg:col-span-2';
+                }
+                return (
+                  <div key={project.title} className={colSpan}>
+                    <ProjectCard
+                      platform={project.platform}
+                      title={project.title}
+                      logo={project.logo as 'smartphone' | 'globe' | 'monitor'}
+                      description={project.description}
+                      technologies={project.technologies}
+                      projectUrl={project.projectUrl}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
