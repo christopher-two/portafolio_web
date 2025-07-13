@@ -1,11 +1,8 @@
+
 "use client";
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './theme-toggle';
 
@@ -17,7 +14,6 @@ const navItems = [
 ];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const SlashIcon = () => (
@@ -28,20 +24,20 @@ export function Header() {
 
   return (
     <header className="fixed top-4 w-full px-4 z-50 flex items-center justify-center gap-2">
-       <div className="hidden md:flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-2 gap-2 border border-border/80 w-full max-w-lg">
-        <nav className="flex items-center text-sm font-medium w-full justify-around">
+       <div className="flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-1 md:p-2 gap-1 md:gap-2 border border-border/80 w-full max-w-sm md:max-w-lg">
+        <nav className="flex items-center text-xs md:text-sm font-medium w-full justify-around">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               className={cn(
-                "transition-colors px-4 py-2 rounded-full text-muted-foreground hover:text-foreground",
+                "transition-colors px-2 py-1 md:px-4 md:py-2 rounded-full text-muted-foreground hover:text-foreground",
                 pathname === item.href ? "bg-secondary/80 text-foreground" : ""
               )}
             >
               {item.label}
               {pathname === item.href && (
-                <span className="ml-2 inline-flex items-center justify-center w-5 h-5 rounded-md bg-muted/50 border border-border/50">
+                <span className="ml-2 hidden md:inline-flex items-center justify-center w-5 h-5 rounded-md bg-muted/50 border border-border/50">
                   <SlashIcon />
                 </span>
               )}
@@ -49,38 +45,8 @@ export function Header() {
           ))}
         </nav>
       </div>
-      <div className="hidden md:block absolute right-4 top-0">
+      <div className="absolute right-4 top-0">
         <ThemeToggle />
-      </div>
-
-      <div className="md:hidden w-full flex justify-end">
-         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="bg-card/50 backdrop-blur-sm text-foreground hover:bg-secondary/80 hover:text-foreground">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Open menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="bg-background border-l-border">
-            <div className="flex flex-col space-y-4 pt-10">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={cn("text-base font-medium text-muted-foreground hover:text-foreground",
-                   pathname === item.href ? "text-foreground" : ""
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
-               <div className="pt-6">
-                <ThemeToggle />
-              </div>
-            </div>
-          </SheetContent>
-        </Sheet>
       </div>
     </header>
   );
