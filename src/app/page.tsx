@@ -6,7 +6,9 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectCard } from '@/components/project-card';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const allProjects = [
   {
@@ -123,18 +125,19 @@ const allProjects = [
   },
 ];
 
+const platforms = ['Todos', 'Multiplatform', 'Mobile App', 'Web'];
 
 export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedPlatform, setSelectedPlatform] = useState('Todos');
 
   const filteredProjects = useMemo(() => {
-    if (!searchTerm) {
-      return allProjects;
-    }
-    return allProjects.filter((project) =>
-      project.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [searchTerm]);
+    return allProjects.filter((project) => {
+      const matchesSearchTerm = project.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesPlatform = selectedPlatform === 'Todos' || project.platform === selectedPlatform;
+      return matchesSearchTerm && matchesPlatform;
+    });
+  }, [searchTerm, selectedPlatform]);
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -158,21 +161,37 @@ export default function HomePage() {
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
 
-             <div className="mb-12 flex justify-center">
-                <div className="relative w-full max-w-lg">
-                  <div className="absolute inset-0 bg-card/50 backdrop-blur-sm rounded-full border border-border/80"></div>
-                  <div className="relative flex items-center p-2">
-                    <Search className="h-5 w-5 mx-3 text-muted-foreground" />
-                    <Input
-                      type="text"
-                      placeholder="Buscar proyectos..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-base placeholder:text-muted-foreground"
-                    />
-                  </div>
+            <div className="mb-8 flex flex-col items-center gap-4">
+               <div className="flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-1 border border-border/80 w-full max-w-sm md:max-w-md">
+                 {platforms.map((platform) => (
+                    <Button
+                      key={platform}
+                      variant="ghost"
+                      onClick={() => setSelectedPlatform(platform)}
+                      className={cn(
+                        "w-full rounded-full text-xs md:text-sm h-8",
+                        selectedPlatform === platform ? 'bg-secondary/80 text-foreground' : 'text-muted-foreground'
+                      )}
+                    >
+                      {platform}
+                    </Button>
+                  ))}
+              </div>
+              <div className="relative w-full max-w-lg">
+                <div className="absolute inset-0 bg-card/50 backdrop-blur-sm rounded-full border border-border/80"></div>
+                <div className="relative flex items-center p-2">
+                  <Search className="h-5 w-5 mx-3 text-muted-foreground" />
+                  <Input
+                    type="text"
+                    placeholder="Buscar proyectos..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-base placeholder:text-muted-foreground"
+                  />
                 </div>
+              </div>
             </div>
+
 
             <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
               {filteredProjects.map((project, index) => {
@@ -201,5 +220,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
