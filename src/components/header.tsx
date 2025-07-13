@@ -23,8 +23,8 @@ export function Header() {
   );
 
   return (
-    <header className="fixed top-4 w-full px-4 z-50 flex items-center justify-center gap-2">
-       <div className="flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-1 md:p-2 gap-1 md:gap-2 border border-border/80 w-full max-w-sm md:max-w-lg">
+    <header className="fixed top-4 w-full px-4 z-50 flex items-center justify-center">
+       <div className="flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-1 border border-border/80 w-full max-w-sm md:max-w-lg">
         <nav className="flex items-center text-xs md:text-sm font-medium w-full justify-around">
           {navItems.map((item) => (
             <Link
@@ -44,8 +44,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-      </div>
-      <div className="absolute right-4 top-0">
+        <div className="mx-2 h-6 border-l border-border/80"></div>
         <ThemeToggle />
       </div>
     </header>
