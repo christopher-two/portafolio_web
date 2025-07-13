@@ -24,14 +24,6 @@ export default function HomePage() {
 
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Trabajos</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Aquí se mostrarán mis proyectos y trabajos destacados.
-                </p>
-              </div>
-            </div>
             <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
               <div className="lg:col-span-2">
                 <ProjectCard
