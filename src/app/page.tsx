@@ -34,20 +34,34 @@ export default function HomePage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 lg:grid-cols-2 lg:gap-12">
-               <Card>
-                 <CardContent className="p-4">
-                   <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
-                   <h3 className="text-lg font-bold mt-4">Project 1</h3>
-                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
-                 </CardContent>
-               </Card>
-               <Card>
-                 <CardContent className="p-4">
-                   <Image src="https://placehold.co/600x400.png" data-ai-hint="modern design" alt="Project 2" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
-                   <h3 className="text-lg font-bold mt-4">Project 2</h3>
-                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
-                 </CardContent>
-               </Card>
+               <div className="bg-purple-200 dark:bg-purple-900/40 p-8 rounded-2xl">
+                 <div className="bg-card shadow-lg rounded-lg overflow-hidden">
+                   <div className="bg-primary/80 p-2 flex items-center gap-1.5">
+                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                   </div>
+                   <div className="p-4">
+                     <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-md object-cover w-full aspect-video" />
+                     <h3 className="text-lg font-bold mt-4">Project 1</h3>
+                     <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+                   </div>
+                 </div>
+               </div>
+               <div className="bg-teal-200 dark:bg-teal-900/40 p-8 rounded-2xl">
+                  <div className="bg-card shadow-lg rounded-lg overflow-hidden">
+                   <div className="bg-primary/80 p-2 flex items-center gap-1.5">
+                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                   </div>
+                   <div className="p-4">
+                     <Image src="https://placehold.co/600x400.png" data-ai-hint="modern design" alt="Project 2" width={600} height={400} className="rounded-md object-cover w-full aspect-video" />
+                     <h3 className="text-lg font-bold mt-4">Project 2</h3>
+                     <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+                   </div>
+                 </div>
+               </div>
             </div>
           </div>
         </section>
