@@ -13,7 +13,7 @@ export default function Home() {
           id="home"
           className="relative flex h-[calc(100vh-3.5rem)] w-full flex-col items-center justify-center text-center"
         >
-          <div className="container">
+          <div className="px-4 md:px-6">
             <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Christopher Two
             </h1>
@@ -28,7 +28,7 @@ export default function Home() {
         </section>
 
         <section id="trabajos" className="w-full py-20 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Trabajos</h2>
@@ -49,7 +49,7 @@ export default function Home() {
         </section>
 
         <section id="sobre-mi" className="w-full py-20 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Sobre mi</h2>
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
 
         <section id="blog" className="w-full py-20 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Blog</h2>
@@ -82,7 +82,7 @@ export default function Home() {
         </section>
 
         <section id="override" className="w-full py-20 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Override</h2>
