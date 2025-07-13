@@ -15,8 +15,8 @@ export default function HomePage() {
                 <h1 className="text-5xl font-glitch tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl/none">
                   Christopher Two
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Multiplatform Developer
+                <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-2xl">
+                  Desarrollador Multiplataforma
                 </p>
               </div>
             </div>
