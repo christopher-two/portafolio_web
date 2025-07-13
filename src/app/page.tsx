@@ -13,7 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <section
           id="home"
-          className="relative flex h-[calc(100vh-4.5rem)] w-full flex-col items-center justify-center text-center"
+          className="relative flex h-screen w-full flex-col items-center justify-center text-center"
         >
           <div className="container px-4 md:px-6">
             <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
@@ -23,7 +23,7 @@ export default function Home() {
               Multiplatform Developer
             </p>
           </div>
-          <Link href="#trabajos" className="absolute bottom-10 animate-bounce">
+          <Link href="#trabajos" className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
               <ArrowDown className="h-6 w-6 text-muted-foreground" />
               <span className="sr-only">Scroll to next section</span>
           </Link>
