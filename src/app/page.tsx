@@ -3,10 +3,12 @@ import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
         <section
@@ -37,13 +39,21 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-               <div className="flex items-center justify-center h-64 rounded-lg bg-muted">
-                 <p className="text-muted-foreground">Project 1</p>
-               </div>
-               <div className="flex items-center justify-center h-64 rounded-lg bg-muted">
-                 <p className="text-muted-foreground">Project 2</p>
-               </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-2 lg:gap-12">
+               <Card>
+                 <CardContent className="p-4">
+                   <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
+                   <h3 className="text-lg font-bold mt-4">Project 1</h3>
+                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+                 </CardContent>
+               </Card>
+               <Card>
+                 <CardContent className="p-4">
+                   <Image src="https://placehold.co/600x400.png" data-ai-hint="modern design" alt="Project 2" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
+                   <h3 className="text-lg font-bold mt-4">Project 2</h3>
+                   <p className="text-muted-foreground text-sm mt-1">A brief description of the project.</p>
+                 </CardContent>
+               </Card>
             </div>
           </div>
         </section>
