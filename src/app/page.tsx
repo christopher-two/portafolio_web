@@ -32,26 +32,44 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-3 lg:gap-12">
-              <ProjectCard 
+            <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  platform="Web"
+                  title="Plataforma E-commerce"
+                  logo="globe"
+                  description="Desarrollo de una plataforma de comercio electrónico completa con pasarelas de pago, gestión de inventario y un panel de administración personalizado. El proyecto se centró en la escalabilidad y una experiencia de usuario fluida."
+                  projectUrl="#"
+                />
+              </div>
+              <ProjectCard
                 platform="Móvil"
-                title="App Móvil"
+                title="App de Fitness"
                 logo="smartphone"
-                description="Una breve descripción del proyecto móvil. Lorem ipsum dolor sit amet."
+                description="Una aplicación móvil para seguimiento de entrenamientos y nutrición."
                 projectUrl="#"
               />
-              <ProjectCard 
-                platform="Web"
-                title="Sitio Web"
-                logo="globe"
-                description="Una breve descripción del sitio web. Consectetur adipiscing elit."
-                projectUrl="#"
-              />
-              <ProjectCard 
+              <ProjectCard
                 platform="Escritorio"
-                title="App de Escritorio"
+                title="Herramienta de Productividad"
                 logo="monitor"
-                description="Una breve descripción de la aplicación de escritorio. Sed do eiusmod tempor."
+                description="Aplicación de escritorio para la gestión de tareas y proyectos personales."
+                projectUrl="#"
+              />
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  platform="Web"
+                  title="Blog Personal"
+                  logo="globe"
+                  description="Creación de un blog dinámico y moderno utilizando un CMS headless para la gestión de contenido y Next.js para el frontend, optimizado para SEO y rendimiento."
+                  projectUrl="#"
+                />
+              </div>
+               <ProjectCard
+                platform="Móvil"
+                title="App de Red Social"
+                logo="smartphone"
+                description="Prototipo de red social enfocada en compartir proyectos creativos."
                 projectUrl="#"
               />
             </div>
