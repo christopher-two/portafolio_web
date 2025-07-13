@@ -2,6 +2,121 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectCard } from '@/components/project-card';
 
+const projects = [
+  {
+    title: 'Quickness',
+    description: 'Sistema innovador para modernizar y centralizar la gestión de todo tipo de accesos, unificando el control bajo una misma plataforma segura y eficiente.',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform', 'Room', 'Datastore', 'Koin', 'Ktor', 'Firebase', 'Gemini Api', 'Biometric', 'Moko Permissions', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern', 'DeepLinks'],
+    projectUrl: 'https://christopher.com.mx/quickness',
+  },
+  {
+    title: 'Lerna',
+    description: 'Plataforma que ofrece diversas herramientas digitales para mejorar la productividad y eficiencia de los profesores en la enseñanza.',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform (Desktop & Wasm)', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Classroom API', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
+    projectUrl: 'https://christopher.com.mx/lerna',
+  },
+  {
+    title: 'Lyra',
+    description: 'Un ecosistema integral diseñado para mejorar y optimizar la práctica de los profesionales de la nutrición.',
+    platform: 'Mobile App',
+    logo: 'smartphone',
+    technologies: ['Jetpack Compose', 'Room', 'Datastore', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'DeepLinks', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
+    projectUrl: 'https://christopher.com.mx/lyra',
+  },
+  {
+    title: 'Calabozos y compuertas',
+    description: 'Aplicación móvil que combina la emoción de los juegos de calabozos con la lógica de las compuertas lógicas, ofreciendo una rica interacción y contenido educativo.',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform', 'Koin', 'Ktor', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
+    projectUrl: 'https://christopher.com.mx/calabozoscompuertas',
+  },
+  {
+    title: 'Portafolio Daniela Navarro Galeana',
+    description: 'Página web que presenta el perfil de una estudiante de Comercio Internacional y Aduanas, cubriendo su experiencia, formación y habilidades.',
+    platform: 'Web',
+    logo: 'globe',
+    technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Firebase Hosting'],
+    projectUrl: 'https://daniela-navarro-galeana.web.app',
+  },
+  {
+    title: 'Eikocolors',
+    description: 'Web para una empresa de diseño gráfico, exponiendo sus trabajos y servicios de manera profesional.',
+    platform: 'Web',
+    logo: 'globe',
+    technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Firebase Hosting'],
+    projectUrl: 'https://eikocolors.web.app',
+  },
+  {
+    title: 'Fuente',
+    description: 'Web hecha para un kinder para mostrar los videos del día del padre hechos por sus hijos.',
+    platform: 'Web',
+    logo: 'globe',
+    technologies: ['React', 'Vite', 'CSS'],
+    projectUrl: 'https://fuente-saber.web.app',
+  },
+  {
+    title: 'Lumi',
+    description: 'Herramienta inteligente que democratiza la creación y el escaneo de códigos QR, transformando ideas en códigos QR visualmente impactantes.',
+    platform: 'Mobile App',
+    logo: 'smartphone',
+    technologies: ['Jetpack Compose', 'Gemini API', 'QR-Rose', 'MVVM', 'Clean Architecture', 'Repository Pattern'],
+    projectUrl: 'https://christopher.com.mx/lumi',
+  },
+  {
+    title: 'Danonino',
+    description: 'Web hecha para mi novia bonita.',
+    platform: 'Web',
+    logo: 'globe',
+    technologies: ['React', 'CSS', 'Vite'],
+    projectUrl: 'https://christopher.com.mx/danonino',
+  },
+  {
+    title: 'Eva',
+    description: 'Librería multiplataforma para experimentar con funcionalidades de IA, principalmente para crear componentes para otros proyectos.',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform (Android, iOS, Wasm, Desktop)', 'Gemini API'],
+    projectUrl: 'https://eva.override.com.mx',
+  },
+  {
+    title: 'Squidgame',
+    description: 'Sistema embebido interactivo que simula el juego del "Puente de Cristal" de la serie "El Juego del Calamar".',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform', 'JVM', 'Wasm', 'Firebase Realtime', 'Firebase Firestore'],
+    projectUrl: 'https://christopher.com.mx/squidgame',
+  },
+  {
+    title: 'Color',
+    description: 'Juego de escritorio para adivinar colores RGB. Entrena la percepción visual del color con diferentes niveles de dificultad.',
+    platform: 'Multiplatform',
+    logo: 'monitor',
+    technologies: ['Compose Multiplatform JVM'],
+    projectUrl: 'https://christopher.com.mx/adivina-color-rgb',
+  },
+  {
+    title: 'DragonMatches',
+    description: 'Una app inspirada en Dragonball con una temática de Tinder, explorando el uso de swipe y conectando con la API de Dragonball.',
+    platform: 'Mobile App',
+    logo: 'smartphone',
+    technologies: ['Koin', 'Ktor', 'Coil', 'Jetpack Compose'],
+    projectUrl: 'https://christopher.com.mx/dragon-matches',
+  },
+  {
+    title: 'Asian',
+    description: 'Línea de tiempo interactiva del crecimiento económico asiático, con visualización de datos históricos y proyecciones futuras.',
+    platform: 'Web',
+    logo: 'globe',
+    technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Firebase Hosting'],
+    projectUrl: 'https://asian-growth-timeline.web.app',
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -25,45 +140,23 @@ export default function HomePage() {
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-              <div className="lg:col-span-2">
-                <ProjectCard
-                  platform="Web"
-                  title="Plataforma E-commerce"
-                  logo="globe"
-                  description="Desarrollo de una plataforma de comercio electrónico completa con pasarelas de pago, gestión de inventario y un panel de administración personalizado. El proyecto se centró en la escalabilidad y una experiencia de usuario fluida."
-                  projectUrl="#"
-                />
-              </div>
-              <ProjectCard
-                platform="Móvil"
-                title="App de Fitness"
-                logo="smartphone"
-                description="Una aplicación móvil para seguimiento de entrenamientos y nutrición."
-                projectUrl="#"
-              />
-              <ProjectCard
-                platform="Escritorio"
-                title="Herramienta de Productividad"
-                logo="monitor"
-                description="Aplicación de escritorio para la gestión de tareas y proyectos personales."
-                projectUrl="#"
-              />
-              <div className="lg:col-span-2">
-                <ProjectCard
-                  platform="Web"
-                  title="Blog Personal"
-                  logo="globe"
-                  description="Creación de un blog dinámico y moderno utilizando un CMS headless para la gestión de contenido y Next.js para el frontend, optimizado para SEO y rendimiento."
-                  projectUrl="#"
-                />
-              </div>
-               <ProjectCard
-                platform="Móvil"
-                title="App de Red Social"
-                logo="smartphone"
-                description="Prototipo de red social enfocada en compartir proyectos creativos."
-                projectUrl="#"
-              />
+              {projects.map((project, index) => (
+                <div
+                  key={project.title}
+                  className={
+                    index < 2 ? 'lg:col-span-2' : ''
+                  }
+                >
+                  <ProjectCard
+                    platform={project.platform}
+                    title={project.title}
+                    logo={project.logo as 'smartphone' | 'globe' | 'monitor'}
+                    description={project.description}
+                    technologies={project.technologies}
+                    projectUrl={project.projectUrl}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>

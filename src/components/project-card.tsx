@@ -11,6 +11,7 @@ interface ProjectCardProps {
   title: string;
   logo: 'smartphone' | 'globe' | 'monitor';
   description: string;
+  technologies: string[];
   projectUrl: string;
 }
 
@@ -20,7 +21,7 @@ const iconMap = {
   monitor: Monitor,
 };
 
-export function ProjectCard({ platform, title, logo, description, projectUrl }: ProjectCardProps) {
+export function ProjectCard({ platform, title, logo, description, technologies, projectUrl }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const LogoComponent = iconMap[logo];
 
@@ -58,15 +59,27 @@ export function ProjectCard({ platform, title, logo, description, projectUrl }: 
 
         {/* Back of the card */}
         <div className="absolute inset-0 h-full w-full rounded-2xl bg-card text-card-foreground [transform:rotateY(180deg)] [backface-visibility:hidden]">
-          <Card className="flex flex-col h-full rounded-2xl shadow-lg border">
-            <CardContent className="p-6 flex flex-col flex-1 items-center justify-center text-center">
-              <h3 className="text-xl font-bold font-headline mb-2">{title}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{description}</p>
-              <Button asChild onClick={handleButtonClick}>
-                <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-                  Ver más
-                </a>
-              </Button>
+          <Card className="flex flex-col h-full rounded-2xl shadow-lg border overflow-hidden">
+            <CardContent className="p-6 flex flex-col flex-1 items-start justify-start text-left overflow-y-auto">
+              <h3 className="text-lg font-bold font-headline mb-2">{title}</h3>
+              <p className="text-xs text-muted-foreground mb-3">{description}</p>
+              
+              <h4 className="text-sm font-bold font-headline mb-1">Tecnologías:</h4>
+              <div className="flex flex-wrap gap-1 mb-4">
+                {technologies.map((tech) => (
+                  <span key={tech} className="bg-secondary text-secondary-foreground text-[10px] px-2 py-1 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto w-full text-center">
+                <Button asChild onClick={handleButtonClick} size="sm">
+                  <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+                    Ver más
+                  </a>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
