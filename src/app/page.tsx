@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1">
+      <main>
         <section
           id="home"
           className="relative flex h-screen w-full flex-col items-center justify-center text-center"
@@ -39,7 +39,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="container mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-2 lg:gap-12">
                <Card>
                  <CardContent className="p-4">
                    <Image src="https://placehold.co/600x400.png" data-ai-hint="abstract tech" alt="Project 1" width={600} height={400} className="rounded-lg object-cover w-full aspect-video" />
