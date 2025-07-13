@@ -1,7 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectCard } from '@/components/project-card';
-import { Smartphone, Monitor, Globe } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -37,17 +36,23 @@ export default function HomePage() {
               <ProjectCard 
                 platform="Móvil"
                 title="App Móvil"
-                LogoComponent={Smartphone}
+                logo="smartphone"
+                description="Una breve descripción del proyecto móvil. Lorem ipsum dolor sit amet."
+                projectUrl="#"
               />
               <ProjectCard 
                 platform="Web"
                 title="Sitio Web"
-                LogoComponent={Globe}
+                logo="globe"
+                description="Una breve descripción del sitio web. Consectetur adipiscing elit."
+                projectUrl="#"
               />
               <ProjectCard 
                 platform="Escritorio"
                 title="App de Escritorio"
-                LogoComponent={Monitor}
+                logo="monitor"
+                description="Una breve descripción de la aplicación de escritorio. Sed do eiusmod tempor."
+                projectUrl="#"
               />
             </div>
           </div>
