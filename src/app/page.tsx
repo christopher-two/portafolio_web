@@ -159,7 +159,7 @@ export default function HomePage() {
         </section>
 
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="w-full px-4 md:px-6">
 
             <div className="mb-8 flex flex-col items-center gap-4">
                <div className="flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-1 border border-border/80 w-full max-w-sm md:max-w-md">
@@ -193,7 +193,7 @@ export default function HomePage() {
             </div>
 
 
-            <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+            <div className="grid auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
               {filteredProjects.map((project, index) => {
                 let colSpan = '';
                 if (index === 0 || index === 3) {
