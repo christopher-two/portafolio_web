@@ -27,9 +27,9 @@ export function Header() {
   );
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-       <div className="hidden md:flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-2 gap-2 border border-border/80">
-        <nav className="flex items-center text-sm font-medium">
+    <header className="fixed top-4 w-full px-4 z-50 flex items-center justify-center gap-2">
+       <div className="hidden md:flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-full p-2 gap-2 border border-border/80 w-full max-w-lg">
+        <nav className="flex items-center text-sm font-medium w-full justify-around">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -49,11 +49,12 @@ export function Header() {
           ))}
         </nav>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block absolute right-4 top-0">
         <ThemeToggle />
       </div>
-      <div className="md:hidden">
-        <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+
+      <div className="md:hidden w-full flex justify-end">
+         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="bg-card/50 backdrop-blur-sm text-foreground hover:bg-secondary/80 hover:text-foreground">
               <Menu className="h-6 w-6" />
@@ -61,17 +62,22 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background border-l-border">
-            <div className="flex flex-col space-y-6 pt-10">
+            <div className="flex flex-col space-y-4 pt-10">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-lg font-medium text-muted-foreground hover:text-foreground"
+                  className={cn("text-base font-medium text-muted-foreground hover:text-foreground",
+                   pathname === item.href ? "text-foreground" : ""
+                  )}
                 >
                   {item.label}
                 </Link>
               ))}
+               <div className="pt-6">
+                <ThemeToggle />
+              </div>
             </div>
           </SheetContent>
         </Sheet>
