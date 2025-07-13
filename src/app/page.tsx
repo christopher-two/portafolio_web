@@ -1,8 +1,14 @@
+
+"use client";
+
+import { useState, useMemo } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectCard } from '@/components/project-card';
+import { Input } from '@/components/ui/input';
+import { Search } from 'lucide-react';
 
-const projects = [
+const allProjects = [
   {
     title: 'Quickness',
     description: 'Sistema innovador para modernizar y centralizar la gestión de todo tipo de accesos, unificando el control bajo una misma plataforma segura y eficiente.',
@@ -117,7 +123,19 @@ const projects = [
   },
 ];
 
+
 export default function HomePage() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredProjects = useMemo(() => {
+    if (!searchTerm) {
+      return allProjects;
+    }
+    return allProjects.filter((project) =>
+      project.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
@@ -139,8 +157,25 @@ export default function HomePage() {
 
         <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
+
+             <div className="mb-12 flex justify-center">
+                <div className="relative w-full max-w-lg">
+                  <div className="absolute inset-0 bg-card/50 backdrop-blur-sm rounded-full border border-border/80"></div>
+                  <div className="relative flex items-center p-2">
+                    <Search className="h-5 w-5 mx-3 text-muted-foreground" />
+                    <Input
+                      type="text"
+                      placeholder="Buscar proyectos..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-base placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+            </div>
+
             <div className="mx-auto grid max-w-7xl auto-rows-[350px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-              {projects.map((project, index) => {
+              {filteredProjects.map((project, index) => {
                 let colSpan = '';
                 if (index === 0 || index === 3) {
                   colSpan = 'lg:col-span-2';
@@ -166,3 +201,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

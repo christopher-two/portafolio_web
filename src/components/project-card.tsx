@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -87,3 +88,5 @@ export function ProjectCard({ platform, title, logo, description, technologies, 
     </div>
   );
 }
+
+    
