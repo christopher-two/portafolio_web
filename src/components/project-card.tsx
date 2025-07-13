@@ -45,7 +45,7 @@ export function ProjectCard({ platform, title, logo, description, projectUrl }: 
       >
         {/* Front of the card */}
         <div className="absolute inset-0 [backface-visibility:hidden]">
-          <Card className="bg-card/50 hover:bg-card/90 transition-all duration-300 ease-in-out group rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border-0">
+          <Card className="bg-card/50 hover:bg-card/90 transition-all duration-300 ease-in-out group rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border">
             <CardContent className="p-6 flex flex-col flex-1 items-center justify-center text-center">
               <div className="w-24 h-24 mb-6 bg-muted/50 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                 <LogoComponent className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
@@ -58,7 +58,7 @@ export function ProjectCard({ platform, title, logo, description, projectUrl }: 
 
         {/* Back of the card */}
         <div className="absolute inset-0 h-full w-full rounded-2xl bg-card text-card-foreground [transform:rotateY(180deg)] [backface-visibility:hidden]">
-          <Card className="flex flex-col h-full rounded-2xl shadow-lg border-0">
+          <Card className="flex flex-col h-full rounded-2xl shadow-lg border">
             <CardContent className="p-6 flex flex-col flex-1 items-center justify-center text-center">
               <h3 className="text-xl font-bold font-headline mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{description}</p>
