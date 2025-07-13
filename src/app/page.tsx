@@ -32,27 +32,27 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-7xl items-start gap-8 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-3 lg:gap-12">
               <ProjectCard 
                 platform="Móvil"
                 title="App Móvil"
                 imageUrl="https://placehold.co/375x812.png"
                 imageHint="mobile app"
-                imageClassName="h-auto w-[60%] shadow-lg"
+                imageClassName="h-full w-auto max-h-[300px]"
               />
               <ProjectCard 
                 platform="Web"
                 title="Sitio Web"
                 imageUrl="https://placehold.co/1024x768.png"
                 imageHint="website design"
-                imageClassName="w-full shadow-lg"
+                imageClassName="w-full"
               />
               <ProjectCard 
                 platform="Escritorio"
                 title="App de Escritorio"
                 imageUrl="https://placehold.co/1280x800.png"
                 imageHint="desktop app"
-                imageClassName="w-full shadow-lg"
+                imageClassName="w-full"
               />
             </div>
           </div>

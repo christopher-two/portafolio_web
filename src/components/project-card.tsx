@@ -10,25 +10,37 @@ interface ProjectCardProps {
   imageClassName?: string;
 }
 
+const WindowBar = () => (
+    <div className="flex items-center px-4 h-10 bg-primary/90 rounded-t-lg">
+      <div className="flex space-x-2">
+        <div className="w-3 h-3 bg-muted/50 rounded-full"></div>
+        <div className="w-3 h-3 bg-muted/50 rounded-full"></div>
+        <div className="w-3 h-3 bg-muted/50 rounded-full"></div>
+      </div>
+    </div>
+);
+
+
 export function ProjectCard({ platform, title, imageUrl, imageHint, imageClassName }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full bg-card/50 backdrop-blur-sm border-border/60 shadow-lg rounded-2xl overflow-hidden">
-      <CardContent className="flex flex-col flex-1 p-6 justify-between">
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <h3 className="text-xl font-bold">{title}</h3>
-          </div>
-          <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{platform}</span>
+    <Card className="bg-secondary/50 border-0 rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
+      <CardContent className="p-6 flex flex-col flex-1">
+        <div className="flex justify-between items-center mb-4">
+            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{platform}</span>
+            <h3 className="text-xl font-bold font-headline">{title}</h3>
         </div>
-        <div className="mt-auto flex justify-center items-end h-full">
-          <Image
-            src={imageUrl}
-            width={800}
-            height={600}
-            alt={title}
-            data-ai-hint={imageHint}
-            className={cn("object-contain object-bottom rounded-t-lg", imageClassName)}
-          />
+        <div className="flex-1 flex flex-col rounded-lg bg-background shadow-inner overflow-hidden">
+            <WindowBar />
+            <div className="flex-1 p-4 flex justify-center items-center">
+                 <Image
+                    src={imageUrl}
+                    width={800}
+                    height={600}
+                    alt={title}
+                    data-ai-hint={imageHint}
+                    className={cn("object-contain object-bottom", imageClassName)}
+                />
+            </div>
         </div>
       </CardContent>
     </Card>
