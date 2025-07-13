@@ -1,6 +1,7 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectCard } from '@/components/project-card';
+import { Smartphone, Monitor, Globe } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -36,23 +37,17 @@ export default function HomePage() {
               <ProjectCard 
                 platform="Móvil"
                 title="App Móvil"
-                imageUrl="https://placehold.co/375x812.png"
-                imageHint="mobile app"
-                imageClassName="h-full w-auto max-h-[300px]"
+                LogoComponent={Smartphone}
               />
               <ProjectCard 
                 platform="Web"
                 title="Sitio Web"
-                imageUrl="https://placehold.co/1024x768.png"
-                imageHint="website design"
-                imageClassName="w-full"
+                LogoComponent={Globe}
               />
               <ProjectCard 
                 platform="Escritorio"
                 title="App de Escritorio"
-                imageUrl="https://placehold.co/1280x800.png"
-                imageHint="desktop app"
-                imageClassName="w-full"
+                LogoComponent={Monitor}
               />
             </div>
           </div>
