@@ -13,7 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <section
           id="home"
-          className="relative flex h-[calc(100vh-3.5rem)] w-full flex-col items-center justify-center text-center"
+          className="relative flex h-[calc(100vh-4.5rem)] w-full flex-col items-center justify-center text-center"
         >
           <div className="container px-4 md:px-6">
             <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
