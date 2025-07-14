@@ -1,6 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { Mail, Linkedin, Github, Instagram, Globe } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, Globe, Youtube, Clapperboard, Newspaper } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
@@ -30,6 +30,24 @@ const contactMethods = [
     href: 'https://www.instagram.com/christopher_two_',
   },
   {
+    icon: <Youtube className="h-12 w-12 text-primary" />,
+    label: 'YouTube',
+    value: '@christopher_two_',
+    href: 'https://www.youtube.com/@christopher_two_',
+  },
+  {
+    icon: <Clapperboard className="h-12 w-12 text-primary" />,
+    label: 'TikTok',
+    value: '@christopher_two',
+    href: 'https://www.tiktok.com/@christopher_two',
+  },
+  {
+    icon: <Newspaper className="h-12 w-12 text-primary" />,
+    label: 'Blog',
+    value: 'blog.christopher.com.mx',
+    href: 'https://blog.christopher.com.mx',
+  },
+  {
     icon: <Globe className="h-12 w-12 text-primary" />,
     label: 'Override',
     value: 'override.com.mx',
@@ -43,7 +61,7 @@ export default function ContactoPage() {
       <Header />
       <main className="container mx-auto flex-1 px-4 py-24 md:px-6">
         <section id="contacto" className="w-full flex items-center justify-center" style={{minHeight: 'calc(100vh - 200px)'}}>
-          <div className="grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+          <div className="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contactMethods.map((method) => (
               <Link key={method.label} href={method.href} target="_blank" rel="noopener noreferrer" className="group">
                 <Card className="h-full transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl bg-card/50 backdrop-blur-sm">
@@ -51,7 +69,7 @@ export default function ContactoPage() {
                     {method.icon}
                     <div className="space-y-1">
                       <p className="text-xl font-bold font-headline">{method.label}</p>
-                      <p className="text-muted-foreground">{method.value}</p>
+                      <p className="text-muted-foreground break-all">{method.value}</p>
                     </div>
                   </CardContent>
                 </Card>
