@@ -111,7 +111,7 @@ const allProjects = [
     title: 'DragonMatches',
     description: 'Una app inspirada en Dragonball con una temática de Tinder, explorando el uso de swipe y conectando con la API de Dragonball.',
     platform: 'Mobile App',
-    logo: 'https://static.vecteezy.com/system/resources/previews/046/903/469/non_2x/one-star-dragon-ball-free-vector.jpg',
+    logo: 'flame',
     technologies: ['Koin', 'Ktor', 'Coil', 'Jetpack Compose'],
     projectUrl: 'https://christopher.com.mx/dragon-matches',
   },
