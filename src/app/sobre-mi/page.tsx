@@ -63,7 +63,7 @@ export default function SobreMiPage() {
                       alt="Foto de Christopher"
                       fill
                       objectFit="cover"
-                      className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white_60%,transparent_100%)]"
+                      className="absolute inset-0"
                       data-ai-hint="profile picture"
                     />
                 </div>
