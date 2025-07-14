@@ -24,8 +24,10 @@ export default function SobreMiPage() {
                       data-ai-hint="profile picture"
                     />
                   </div>
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>Content for Sobre mi will go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+                  <div className="space-y-4 text-muted-foreground max-w-2xl">
+                    <p className="text-lg/relaxed">
+                      Soy un Desarrollador Multiplataforma con experiencia en la creación de software. Estoy en el proceso de lanzar mi propia empresa, Override, con el objetivo de desarrollar productos digitales.
+                    </p>
                     <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
                   </div>
                 </div>
