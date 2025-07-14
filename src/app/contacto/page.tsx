@@ -8,14 +8,14 @@ const contactMethods = [
   {
     icon: <Mail className="h-12 w-12 text-primary" />,
     label: 'Email',
-    value: 'christopher.two.ga@gmail.com',
-    href: 'mailto:christopher.two.ga@gmail.com',
+    value: 'Christopher_two@proton.me',
+    href: 'mailto:Christopher_two@proton.me',
   },
   {
     icon: <Linkedin className="h-12 w-12 text-primary" />,
     label: 'LinkedIn',
-    value: 'Christopher Two',
-    href: 'https://www.linkedin.com/in/christopher-two-galeana-alvarado-24b373238/',
+    value: 'christopher-alejandro-maldonado-chavez',
+    href: 'https://www.linkedin.com/in/christopher-alejandro-maldonado-chavez',
   },
   {
     icon: <Github className="h-12 w-12 text-primary" />,
@@ -26,8 +26,8 @@ const contactMethods = [
   {
     icon: <Instagram className="h-12 w-12 text-primary" />,
     label: 'Instagram',
-    value: '@christopher.two',
-    href: 'https://www.instagram.com/christopher.two/',
+    value: '@christopher_two_',
+    href: 'https://www.instagram.com/christopher_two_',
   },
   {
     icon: <Globe className="h-12 w-12 text-primary" />,
