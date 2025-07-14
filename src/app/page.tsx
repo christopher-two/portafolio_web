@@ -39,7 +39,7 @@ const allProjects = [
     title: 'Calabozos y compuertas',
     description: 'Aplicación móvil que combina la emoción de los juegos de calabozos con la lógica de las compuertas lógicas, ofreciendo una rica interacción y contenido educativo.',
     platform: 'Multiplatform',
-    logo: 'monitor',
+    logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//calabozoscompuertas_logo_neon.svg',
     technologies: ['Compose Multiplatform', 'Koin', 'Ktor', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
     projectUrl: 'https://christopher.com.mx/calabozoscompuertas',
   },
