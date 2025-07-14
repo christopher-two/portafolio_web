@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Smartphone, Globe, Monitor, Waves } from 'lucide-react';
+import { Smartphone, Globe, Monitor, Waves, Heart, Palette, GitMerge } from 'lucide-react';
 
 interface ProjectCardProps {
   platform: string;
@@ -22,6 +22,9 @@ const iconMap = {
   globe: Globe,
   monitor: Monitor,
   waves: Waves,
+  heart: Heart,
+  palette: Palette,
+  'git-merge': GitMerge,
 };
 
 export function ProjectCard({ platform, title, logo, description, technologies, projectUrl }: ProjectCardProps) {
