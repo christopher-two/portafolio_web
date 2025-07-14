@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Smartphone, Globe, Monitor } from 'lucide-react';
+import { Smartphone, Globe, Monitor, Waves } from 'lucide-react';
 
 interface ProjectCardProps {
   platform: string;
@@ -21,6 +21,7 @@ const iconMap = {
   smartphone: Smartphone,
   globe: Globe,
   monitor: Monitor,
+  waves: Waves,
 };
 
 export function ProjectCard({ platform, title, logo, description, technologies, projectUrl }: ProjectCardProps) {
@@ -39,7 +40,7 @@ export function ProjectCard({ platform, title, logo, description, technologies, 
 
   const renderLogo = () => {
     if (isUrl) {
-      return <Image src={logo} alt={`${title} logo`} width={64} height={64} className="w-16 h-16" />;
+      return <Image src={logo} alt={`${title} logo`} width={64} height={64} className="w-16 h-16 object-contain" />;
     }
     if (IconComponent) {
       return <IconComponent className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />;

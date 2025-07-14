@@ -63,7 +63,7 @@ const allProjects = [
     title: 'Fuente',
     description: 'Web hecha para un kinder para mostrar los videos del día del padre hechos por sus hijos.',
     platform: 'Web',
-    logo: 'globe',
+    logo: 'waves',
     technologies: ['React', 'Vite', 'CSS'],
     projectUrl: 'https://fuente-saber.web.app',
   },
