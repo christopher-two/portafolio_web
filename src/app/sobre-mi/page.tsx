@@ -36,7 +36,7 @@ const skills = [
     icon: <Atom className="h-8 w-8 text-primary" />,
     title: 'Desarrollo Web',
     technologies: 'React, Next.js, Tailwind CSS, Vite',
-    description: 'Apasionado por la creación de interfaces de usuario modernas y responsivas. Experiencia en el desarrollo de aplicaciones web con las últimas tecnologías del ecosistema de React.',
+    description: 'Si bien mi área principal de especialización se centra en el desarrollo multiplataforma, también estoy explorando activamente el desarrollo web. He tenido la oportunidad de crear y entregar algunos proyectos web para diversas empresas. En esta faceta, me considero más un aspirante, buscando expandir mis conocimientos y habilidades en el campo.',
   },
   {
     icon: <Code className="h-8 w-8 text-primary" />,
