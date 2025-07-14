@@ -11,6 +11,7 @@ const navItems = [
   { href: '/', label: 'Trabajos' },
   { href: '/sobre-mi', label: 'Sobre mi' },
   { href: '/blog', label: 'Blog' },
+  { href: '/contacto', label: 'Contacto' },
 ];
 
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
   return (
     <header className="fixed top-4 w-full px-4 z-50 flex items-center justify-center">
        <div className={cn(
-         "flex items-center justify-center rounded-full p-1 transition-all duration-300 w-full max-w-sm md:max-w-lg",
+         "flex items-center justify-center rounded-full p-1 transition-all duration-300 w-full max-w-lg",
          scrolled ? "bg-card/50 backdrop-blur-sm border border-border/80" : "bg-transparent border-transparent"
        )}>
         <nav className="flex items-center text-xs md:text-sm font-medium w-full justify-around">
