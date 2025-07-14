@@ -6,13 +6,12 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './theme-toggle';
 import { useState, useEffect } from 'react';
-import { LayoutGrid, User, BookOpen, Zap } from 'lucide-react';
 
 const navItems = [
-  { href: '/', label: 'Trabajos', icon: LayoutGrid },
-  { href: '/sobre-mi', label: 'Sobre mi', icon: User },
-  { href: '/blog', label: 'Blog', icon: BookOpen },
-  { href: '/override', label: 'Override', icon: Zap },
+  { href: '/', label: 'Trabajos' },
+  { href: '/sobre-mi', label: 'Sobre mi' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/override', label: 'Override' },
 ];
 
 export function Header() {
@@ -35,7 +34,6 @@ export function Header() {
        )}>
         <nav className="flex items-center text-xs md:text-sm font-medium w-full justify-around">
           {navItems.map((item) => {
-            const Icon = item.icon;
             return (
               <Link
                 key={item.label}
@@ -46,11 +44,6 @@ export function Header() {
                 )}
               >
                 {item.label}
-                {pathname === item.href && (
-                  <span className="ml-2 hidden md:inline-flex items-center justify-center w-5 h-5 rounded-md bg-muted/50 border border-border/50">
-                    <Icon className="h-3 w-3" />
-                  </span>
-                )}
               </Link>
             )
           })}
