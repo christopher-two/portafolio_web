@@ -5,7 +5,15 @@ import { Code, Atom, TabletSmartphone, Smartphone } from 'lucide-react';
 
 const skills = [
   {
-    icon: <Smartphone className="h-8 w-8 text-primary" />,
+    icon: (
+      <Image
+        src="https://icon.icepanel.io/Technology/svg/Kotlin.svg"
+        alt="Kotlin logo"
+        width={32}
+        height={32}
+        className="h-8 w-8"
+      />
+    ),
     title: 'Desarrollo Multiplataforma',
     technologies: 'Compose Multiplataforma, Kotlin Multiplataforma',
     description: 'Cuento con una sólida experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web, todo ello gestionado desde una única base de código. Este enfoque me permite no solo optimizar los tiempos de desarrollo, sino también asegurar una experiencia de usuario consistente y fluida en todas las plataformas, manteniendo la calidad y el rendimiento esperados en cada entorno.',
