@@ -35,7 +35,7 @@ const skills = [
   {
     icon: <Atom className="h-8 w-8 text-primary" />,
     title: 'Desarrollo Web',
-    technologies: 'React, Next.js, Tailwind CSS',
+    technologies: 'React, Next.js, Tailwind CSS, Vite',
     description: 'Apasionado por la creación de interfaces de usuario modernas y responsivas. Experiencia en el desarrollo de aplicaciones web con las últimas tecnologías del ecosistema de React.',
   },
   {
