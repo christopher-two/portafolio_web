@@ -55,7 +55,7 @@ const allProjects = [
     title: 'Eikocolors',
     description: 'Web para una empresa de diseño gráfico, exponiendo sus trabajos y servicios de manera profesional.',
     platform: 'Web',
-    logo: 'globe',
+    logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//Logo_Eikocolors.png',
     technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Firebase Hosting'],
     projectUrl: 'https://eikocolors.web.app',
   },
