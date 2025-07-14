@@ -15,7 +15,7 @@ const allProjects = [
     title: 'Quickness',
     description: 'Sistema innovador para modernizar y centralizar la gestión de todo tipo de accesos, unificando el control bajo una misma plataforma segura y eficiente.',
     platform: 'Multiplatform',
-    logo: 'monitor',
+    logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//LogoQuicknessQC.svg',
     technologies: ['Compose Multiplatform', 'Room', 'Datastore', 'Koin', 'Ktor', 'Firebase', 'Gemini Api', 'Biometric', 'Moko Permissions', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern', 'DeepLinks'],
     projectUrl: 'https://christopher.com.mx/quickness',
   },
@@ -204,7 +204,7 @@ export default function HomePage() {
                     <ProjectCard
                       platform={project.platform}
                       title={project.title}
-                      logo={project.logo as 'smartphone' | 'globe' | 'monitor'}
+                      logo={project.logo}
                       description={project.description}
                       technologies={project.technologies}
                       projectUrl={project.projectUrl}

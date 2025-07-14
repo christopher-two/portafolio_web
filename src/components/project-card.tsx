@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,7 @@ import { Smartphone, Globe, Monitor } from 'lucide-react';
 interface ProjectCardProps {
   platform: string;
   title: string;
-  logo: 'smartphone' | 'globe' | 'monitor';
+  logo: string; // Can be icon name or URL
   description: string;
   technologies: string[];
   projectUrl: string;
@@ -24,7 +25,9 @@ const iconMap = {
 
 export function ProjectCard({ platform, title, logo, description, technologies, projectUrl }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const LogoComponent = iconMap[logo];
+  
+  const isUrl = logo.startsWith('http');
+  const LogoComponent = !isUrl ? iconMap[logo as keyof typeof iconMap] : null;
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
@@ -50,7 +53,11 @@ export function ProjectCard({ platform, title, logo, description, technologies, 
           <Card className="bg-card/50 hover:bg-card/90 transition-all duration-300 ease-in-out group rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border">
             <CardContent className="p-6 flex flex-col flex-1 items-center justify-center text-center">
               <div className="w-24 h-24 mb-6 bg-muted/50 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                <LogoComponent className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+                {isUrl ? (
+                  <Image src={logo} alt={`${title} logo`} width={64} height={64} className="w-16 h-16" />
+                ) : (
+                  LogoComponent && <LogoComponent className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+                )}
               </div>
               <h3 className="text-xl font-bold font-headline">{title}</h3>
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">{platform}</span>
@@ -88,5 +95,3 @@ export function ProjectCard({ platform, title, logo, description, technologies, 
     </div>
   );
 }
-
-    
