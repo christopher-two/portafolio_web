@@ -23,7 +23,7 @@ const allProjects = [
     title: 'Lerna',
     description: 'Plataforma que ofrece diversas herramientas digitales para mejorar la productividad y eficiencia de los profesores en la enseñanza.',
     platform: 'Multiplatform',
-    logo: 'monitor',
+    logo: 'L',
     technologies: ['Compose Multiplatform (Desktop & Wasm)', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Classroom API', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
     projectUrl: 'https://christopher.com.mx/lerna',
   },
