@@ -32,8 +32,8 @@ const contactMethods = [
   {
     icon: <Youtube className="h-12 w-12 text-primary" />,
     label: 'YouTube',
-    value: '@christopher_two_',
-    href: 'https://www.youtube.com/@christopher_two_',
+    value: 'ChristopherTwo',
+    href: 'https://www.youtube.com/@ChristopherTwo',
   },
   {
     icon: <Clapperboard className="h-12 w-12 text-primary" />,
