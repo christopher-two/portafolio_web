@@ -30,7 +30,7 @@ const skills = [
     ),
     title: 'Desarrollo Móvil',
     technologies: 'Jetpack Compose, SwiftUI, Swift',
-    description: 'Creación de aplicaciones móviles nativas para Android y iOS, enfocadas en un rendimiento óptimo y una experiencia de usuario fluida y moderna.',
+    description: 'Desde mis inicios en el desarrollo, he estado creando aplicaciones utilizando Jetpack Compose. En este ámbito, me considero un profesional con un nivel mid-senior, aportando una sólida y amplia experiencia en el desarrollo con esta tecnología.',
   },
   {
     icon: <Atom className="h-8 w-8 text-primary" />,
