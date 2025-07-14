@@ -11,7 +11,6 @@ const navItems = [
   { href: '/', label: 'Trabajos' },
   { href: '/sobre-mi', label: 'Sobre mi' },
   { href: '/blog', label: 'Blog' },
-  { href: '/override', label: 'Override' },
 ];
 
 export function Header() {
