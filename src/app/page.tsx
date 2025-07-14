@@ -95,7 +95,7 @@ const allProjects = [
     title: 'Squidgame',
     description: 'Sistema embebido interactivo que simula el juego del "Puente de Cristal" de la serie "El Juego del Calamar".',
     platform: 'Multiplatform',
-    logo: 'https://static.vecteezy.com/system/resources/previews/008/770/823/non_2x/squid-game-series-logo-free-vector.jpg',
+    logo: 'shapes',
     technologies: ['Compose Multiplatform', 'JVM', 'Wasm', 'Firebase Realtime', 'Firebase Firestore'],
     projectUrl: 'https://christopher.com.mx/squidgame',
   },
