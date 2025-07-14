@@ -55,7 +55,7 @@ const navLinks = [
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full py-8 md:py-12 mt-16">
+    <footer className="w-full py-8 md:py-12 mt-16 px-4">
       <div className="container mx-auto max-w-7xl rounded-2xl border border-border/80 bg-card/50 p-8 shadow-lg backdrop-blur-sm">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
