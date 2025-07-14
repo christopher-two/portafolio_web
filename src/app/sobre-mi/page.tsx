@@ -1,6 +1,28 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
+import { Code, Atom, Smartphone } from 'lucide-react';
+
+const skills = [
+  {
+    icon: <Smartphone className="h-8 w-8 text-primary" />,
+    title: 'Desarrollo Multiplataforma',
+    technologies: 'Compose Multiplatform, Jetpack Compose',
+    description: 'Experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web desde una única base de código, garantizando una experiencia de usuario consistente.',
+  },
+  {
+    icon: <Atom className="h-8 w-8 text-primary" />,
+    title: 'Desarrollo Frontend',
+    technologies: 'React, Next.js, Tailwind CSS',
+    description: 'Apasionado por la creación de interfaces de usuario modernas y responsivas. Experiencia en el desarrollo de aplicaciones web con las últimas tecnologías del ecosistema de React.',
+  },
+  {
+    icon: <Code className="h-8 w-8 text-primary" />,
+    title: 'Backend y Cloud',
+    technologies: 'Ktor, Firebase, Google Cloud',
+    description: 'Habilidad para construir servicios backend robustos y escalables, así como para desplegar y administrar aplicaciones en la nube utilizando Docker y servicios de Firebase.',
+  },
+];
 
 export default function SobreMiPage() {
   return (
@@ -32,6 +54,34 @@ export default function SobreMiPage() {
              </div>
           </div>
         </section>
+
+        <section id="habilidades" className="w-full py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Mis Habilidades</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Estas son algunas de las tecnologías y áreas en las que tengo experiencia.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+              {skills.map((skill) => (
+                <div key={skill.title} className="flex flex-col items-start space-y-4 rounded-lg border bg-card p-6 text-left shadow-sm transition-all hover:scale-105 hover:shadow-lg">
+                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
+                    {skill.icon}
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold font-headline">{skill.title}</h3>
+                    <p className="font-semibold text-primary">{skill.technologies}</p>
+                    <p className="text-muted-foreground">{skill.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
