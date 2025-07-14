@@ -7,7 +7,7 @@ const skills = [
   {
     icon: <Smartphone className="h-8 w-8 text-primary" />,
     title: 'Desarrollo Multiplataforma',
-    technologies: 'Compose Multiplatform, Jetpack Compose',
+    technologies: 'Compose Multiplataforma, Kotlin Multiplataforma',
     description: 'Experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web desde una única base de código, garantizando una experiencia de usuario consistente.',
   },
   {
