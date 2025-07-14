@@ -31,7 +31,7 @@ const allProjects = [
     title: 'Lyra',
     description: 'Un ecosistema integral diseñado para mejorar y optimizar la práctica de los profesionales de la nutrición.',
     platform: 'Mobile App',
-    logo: 'smartphone',
+    logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//Logo%20Gaia%20SB.svg',
     technologies: ['Jetpack Compose', 'Room', 'Datastore', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'DeepLinks', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
     projectUrl: 'https://christopher.com.mx/lyra',
   },
