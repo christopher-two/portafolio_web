@@ -29,7 +29,7 @@ const skills = [
       />
     ),
     title: 'Desarrollo Móvil',
-    technologies: 'Jetpack Compose, SwiftUI, Swift',
+    technologies: 'Jetpack Compose, Kotlin',
     description: 'Desde mis inicios en el desarrollo, he estado creando aplicaciones utilizando Jetpack Compose. En este ámbito, me considero un profesional con un nivel mid-senior, aportando una sólida y amplia experiencia en el desarrollo con esta tecnología.',
   },
   {
