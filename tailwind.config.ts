@@ -20,6 +20,7 @@ export default {
         body: ['Inter', 'sans-serif'],
         headline: ['"Space Grotesk"', 'sans-serif'],
         glitch: ['"Rubik Glitch"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
