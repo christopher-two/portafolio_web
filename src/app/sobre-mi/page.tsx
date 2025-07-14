@@ -89,7 +89,7 @@ export default function SobreMiPage() {
             </div>
             <div className="mx-auto grid max-w-5xl items-stretch gap-8 sm:grid-cols-2 md:grid-cols-2 lg:gap-12">
               {skills.map((skill) => (
-                <div key={skill.title} className="flex flex-col items-start space-y-4 rounded-lg border bg-card p-6 text-left shadow-sm transition-all hover:scale-105 hover:shadow-lg">
+                <div key={skill.title} className="flex flex-col items-start space-y-4 rounded-lg border bg-card/50 p-6 text-left shadow-lg transition-all hover:scale-105 hover:shadow-xl backdrop-blur-sm">
                   <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
                     {skill.icon}
                   </div>
