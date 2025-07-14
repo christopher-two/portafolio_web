@@ -47,7 +47,7 @@ const allProjects = [
     title: 'Portafolio Daniela Navarro Galeana',
     description: 'Página web que presenta el perfil de una estudiante de Comercio Internacional y Aduanas, cubriendo su experiencia, formación y habilidades.',
     platform: 'Web',
-    logo: 'globe',
+    logo: 'https://firebasestorage.googleapis.com/v0/b/dany-66632.appspot.com/o/DNG.svg?alt=media&token=37584f88-3035-4cd7-b30e-f5a74fb95d27',
     technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Firebase Hosting'],
     projectUrl: 'https://daniela-navarro-galeana.web.app',
   },
