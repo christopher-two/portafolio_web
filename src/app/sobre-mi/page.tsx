@@ -8,7 +8,7 @@ const skills = [
     icon: <Smartphone className="h-8 w-8 text-primary" />,
     title: 'Desarrollo Multiplataforma',
     technologies: 'Compose Multiplataforma, Kotlin Multiplataforma',
-    description: 'Experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web desde una única base de código, garantizando una experiencia de usuario consistente.',
+    description: 'Cuento con una sólida experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web, todo ello gestionado desde una única base de código. Este enfoque me permite no solo optimizar los tiempos de desarrollo, sino también asegurar una experiencia de usuario consistente y fluida en todas las plataformas, manteniendo la calidad y el rendimiento esperados en cada entorno.',
   },
   {
     icon: <TabletSmartphone className="h-8 w-8 text-primary" />,
@@ -41,7 +41,7 @@ export default function SobreMiPage() {
               <h1 className="text-3xl font-bold font-montserrat tracking-tighter sm:text-4xl md:text-5xl">Yo soy Christopher</h1>
             </div>
              <div className="mx-auto max-w-3xl py-12 text-center text-muted-foreground">
-                <div className="relative mb-8 w-full h-96 overflow-hidden">
+                <div className="relative mb-8 w-full h-96">
                     <Image
                       src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
                       alt="Foto de Christopher"
