@@ -13,8 +13,8 @@ export default function SobreMiPage() {
               <h1 className="text-3xl font-bold font-montserrat tracking-tighter sm:text-4xl md:text-5xl">Yo soy Christopher</h1>
             </div>
              <div className="mx-auto max-w-5xl py-12">
-                <div className="flex flex-col items-center gap-8 text-left md:flex-row md:items-start md:gap-12">
-                  <div className="w-48 flex-shrink-0 md:w-64">
+                <div className="clearfix">
+                  <div className="w-48 md:w-64 md:float-left md:mr-12 mb-4 mx-auto">
                     <Image
                       src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
                       alt="Foto de Christopher"
@@ -24,7 +24,7 @@ export default function SobreMiPage() {
                       data-ai-hint="profile picture"
                     />
                   </div>
-                  <div className="space-y-4 text-muted-foreground max-w-2xl">
+                  <div className="space-y-4 text-muted-foreground max-w-2xl text-left">
                     <p className="text-lg/relaxed">
                       Soy un Desarrollador Multiplataforma con experiencia en la creación de software. Estoy en el proceso de lanzar mi propia empresa, Override, con el objetivo de desarrollar productos digitales.
                     </p>
