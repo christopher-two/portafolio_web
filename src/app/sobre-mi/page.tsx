@@ -1,7 +1,7 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
-import { Code, Atom, Smartphone } from 'lucide-react';
+import { Code, Atom, TabletSmartphone, Smartphone } from 'lucide-react';
 
 const skills = [
   {
@@ -11,8 +11,14 @@ const skills = [
     description: 'Experiencia en la creación de aplicaciones nativas para Android, iOS, Desktop y Web desde una única base de código, garantizando una experiencia de usuario consistente.',
   },
   {
+    icon: <TabletSmartphone className="h-8 w-8 text-primary" />,
+    title: 'Desarrollo Móvil',
+    technologies: 'Jetpack Compose, SwiftUI, Swift',
+    description: 'Creación de aplicaciones móviles nativas para Android y iOS, enfocadas en un rendimiento óptimo y una experiencia de usuario fluida y moderna.',
+  },
+  {
     icon: <Atom className="h-8 w-8 text-primary" />,
-    title: 'Desarrollo Frontend',
+    title: 'Desarrollo Web',
     technologies: 'React, Next.js, Tailwind CSS',
     description: 'Apasionado por la creación de interfaces de usuario modernas y responsivas. Experiencia en el desarrollo de aplicaciones web con las últimas tecnologías del ecosistema de React.',
   },
@@ -35,13 +41,13 @@ export default function SobreMiPage() {
               <h1 className="text-3xl font-bold font-montserrat tracking-tighter sm:text-4xl md:text-5xl">Yo soy Christopher</h1>
             </div>
              <div className="mx-auto max-w-3xl py-12 text-center text-muted-foreground">
-                <div className="relative mb-8 w-full h-96 overflow-hidden rounded-lg">
+                <div className="relative mb-8 w-full h-96 overflow-hidden">
                     <Image
                       src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
                       alt="Foto de Christopher"
                       layout="fill"
                       objectFit="cover"
-                      className="absolute inset-0"
+                      className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white_60%,transparent_100%)]"
                       data-ai-hint="profile picture"
                     />
                 </div>
@@ -65,7 +71,7 @@ export default function SobreMiPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-2 lg:gap-12">
               {skills.map((skill) => (
                 <div key={skill.title} className="flex flex-col items-start space-y-4 rounded-lg border bg-card p-6 text-left shadow-sm transition-all hover:scale-105 hover:shadow-lg">
                   <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
