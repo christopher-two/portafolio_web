@@ -12,9 +12,8 @@ export default function SobreMiPage() {
             <div className="space-y-2">
               <h1 className="text-3xl font-bold font-montserrat tracking-tighter sm:text-4xl md:text-5xl">Yo soy Christopher</h1>
             </div>
-             <div className="mx-auto max-w-5xl py-12">
-                <div className="clearfix">
-                  <div className="w-48 md:w-64 md:float-left md:mr-12 mb-4 mx-auto">
+             <div className="mx-auto max-w-3xl py-12 text-center text-muted-foreground">
+                <div className="mb-8 flex justify-center">
                     <Image
                       src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
                       alt="Foto de Christopher"
@@ -23,13 +22,12 @@ export default function SobreMiPage() {
                       className="rounded-full object-cover shadow-lg"
                       data-ai-hint="profile picture"
                     />
-                  </div>
-                  <div className="space-y-4 text-muted-foreground max-w-2xl text-left">
+                </div>
+                <div className="space-y-4 text-left max-w-2xl mx-auto">
                     <p className="text-lg/relaxed">
                       Soy un Desarrollador Multiplataforma con experiencia en la creación de software. Estoy en el proceso de lanzar mi propia empresa, Override, con el objetivo de desarrollar productos digitales.
                     </p>
                     <p>He trabajado en varios proyectos de software, desde colaboraciones en productos multiplataforma como Quickness, hasta el desarrollo de mis propias aplicaciones como Lumi.  Actualmente, me estoy centrando en la tecnología de Jetpack Compose y Compose Multiplataforma. Esto me permite construir productos que funcionan en diferentes sistemas, llegando a más usuarios con una experiencia consistente. Mi compromiso es seguir innovando y mejorando la forma en que la tecnología se conecta con las personas.</p>
-                  </div>
                 </div>
              </div>
           </div>
