@@ -63,7 +63,7 @@ const allProjects = [
     title: 'Fuente',
     description: 'Web hecha para un kinder para mostrar los videos del día del padre hechos por sus hijos.',
     platform: 'Web',
-    logo: 'waves',
+    logo: 'https://cdn0.iconfinder.com/data/icons/city-elements-flaticon/64/park-fountain-furniture_and_household-farming_and_gardening-architecture_and_city-miscellaneous-1024.png',
     technologies: ['React', 'Vite', 'CSS'],
     projectUrl: 'https://fuente-saber.web.app',
   },

@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn0.iconfinder.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
