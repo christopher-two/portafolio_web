@@ -13,15 +13,25 @@ export default function SobreMiPage() {
               <h1 className="text-3xl font-bold font-montserrat tracking-tighter sm:text-4xl md:text-5xl">Yo soy Christopher</h1>
             </div>
              <div className="mx-auto max-w-3xl py-12 text-center text-muted-foreground">
-                <div className="mb-8 flex justify-center">
+                <div className="relative mb-8 w-full h-64 overflow-hidden rounded-lg">
                     <Image
                       src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
-                      alt="Foto de Christopher"
-                      width={256}
-                      height={256}
-                      className="rounded-full object-cover shadow-lg"
-                      data-ai-hint="profile picture"
+                      alt="Fondo de perfil de Christopher"
+                      layout="fill"
+                      objectFit="cover"
+                      className="absolute inset-0 scale-110 blur-2xl"
+                      data-ai-hint="profile background"
                     />
+                     <div className="absolute inset-0 flex items-center justify-center p-4">
+                      <Image
+                        src="https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/imagenes//FotoPerfil.JPG"
+                        alt="Foto de Christopher"
+                        width={256}
+                        height={256}
+                        className="relative h-full w-auto object-contain rounded-lg shadow-2xl"
+                        data-ai-hint="profile picture"
+                      />
+                     </div>
                 </div>
                 <div className="space-y-4 text-left max-w-2xl mx-auto">
                     <p className="text-lg/relaxed">
