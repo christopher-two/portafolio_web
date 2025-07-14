@@ -9,9 +9,9 @@ export default function SobreMiPage() {
         <section id="sobre-mi" className="w-full">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-6xl font-bold font-montserrat tracking-tighter sm:text-8xl md:text-9xl">Sobre mi</h1>
+              <h1 className="text-6xl font-bold font-montserrat tracking-tighter sm:text-8xl md:text-9xl">Yo soy Christopher</h1>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Un poco sobre mi trayectoria y habilidades.
+                Un poco sobre mi, mi trayectoria y mis habilidades.
               </p>
             </div>
              <div className="mx-auto max-w-3xl py-12 text-left space-y-4 text-muted-foreground">
