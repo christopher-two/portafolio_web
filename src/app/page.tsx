@@ -48,7 +48,7 @@ const allProjects = [
     title: 'Bifrost Converter',
     description: 'Aplicación de escritorio multiplataforma (Windows, macOS, Linux) que funciona como una calculadora y conversor de sistemas numéricos avanzado (Decimal, Binario, Hexadecimal, Octal), demostrando una arquitectura moderna con Kotlin Multiplatform (KMP).',
     platform: 'Multiplatform',
-    logo: 'milestone',
+    logo: 'https://cdn-icons-png.flaticon.com/512/2595/2595449.png',
     technologies: ['Compose Multiplatform', 'Kotlin Multiplatform', 'MVVM', 'Clean Architecture'],
     projectUrl: 'https://github.com/christopher-two/BifrostConverter',
   },
