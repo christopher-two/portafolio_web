@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { useState, useMemo } from 'react';
@@ -17,7 +18,7 @@ const allProjects = [
     platform: 'Multiplatform',
     logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//LogoQuicknessQC.svg',
     technologies: ['Compose Multiplatform', 'Room', 'Datastore', 'Koin', 'Ktor', 'Firebase', 'Gemini Api', 'Biometric', 'Moko Permissions', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern', 'DeepLinks'],
-    projectUrl: 'https://christopher.com.mx/quickness',
+    projectUrl: 'https://quickness.override.com.mx/',
   },
   {
     title: 'Lerna',
@@ -25,7 +26,7 @@ const allProjects = [
     platform: 'Multiplatform',
     logo: 'L',
     technologies: ['Compose Multiplatform (Desktop & Wasm)', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Classroom API', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
-    projectUrl: 'https://christopher.com.mx/lerna',
+    projectUrl: 'https://lerna.override.com.mx/',
   },
   {
     title: 'Lyra',
@@ -33,7 +34,7 @@ const allProjects = [
     platform: 'Mobile App',
     logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//Logo%20Gaia%20SB.svg',
     technologies: ['Jetpack Compose', 'Room', 'Datastore', 'Koin', 'Ktor', 'Coil', 'Firebase', 'Backend (Ktor)', 'Docker', 'Google Cloud Functions', 'Gemini API', 'MVVM', 'DeepLinks', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
-    projectUrl: 'https://christopher.com.mx/lyra',
+    projectUrl: 'https://lyra.com.mx/',
   },
   {
     title: 'Calabozos y compuertas',
@@ -41,7 +42,15 @@ const allProjects = [
     platform: 'Multiplatform',
     logo: 'https://vluoppbaehfmhkebyygv.supabase.co/storage/v1/object/public/logos//calabozoscompuertas_logo_neon.svg',
     technologies: ['Compose Multiplatform', 'Koin', 'Ktor', 'Coil', 'MVVM', 'Clean Architecture', 'Multimodularity', 'Layered Model', 'Repository Pattern'],
-    projectUrl: 'https://christopher.com.mx/calabozoscompuertas',
+    projectUrl: 'https://calabozoscompuertas.override.com.mx/',
+  },
+  {
+    title: 'Bifrost Converter',
+    description: 'Aplicación de escritorio multiplataforma (Windows, macOS, Linux) que funciona como una calculadora y conversor de sistemas numéricos avanzado (Decimal, Binario, Hexadecimal, Octal), demostrando una arquitectura moderna con Kotlin Multiplatform (KMP).',
+    platform: 'Multiplatform',
+    logo: 'milestone',
+    technologies: ['Compose Multiplatform', 'Kotlin Multiplatform', 'MVVM', 'Clean Architecture'],
+    projectUrl: 'https://github.com/christopher-two/BifrostConverter',
   },
   {
     title: 'Portafolio Daniela Navarro Galeana',
