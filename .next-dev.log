@@ -1,0 +1,35 @@
+
+> nextn@0.1.0 dev /home/christopher-two/Documentos/webs/portafolio_web
+> next dev --turbopack -p 9002
+
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:9002
+   - Network:      http://192.168.1.69:9002
+
+ ✓ Starting...
+ ✓ Ready in 1023ms
+ ○ Compiling /[...slug] ...
+ ✓ Compiled /[...slug] in 4s
+Error: Route "/[...slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CatchAllPage (src/app/[...slug]/page.tsx:29:18)
+  27 |
+  28 | export default async function CatchAllPage({ params }: Props) {
+> 29 |   const slugArr = params?.slug || []
+     |                  ^
+  30 |   // if root (no slug) let the index route handle it
+  31 |   if (slugArr.length === 0) return null
+  32 |
+ GET /weather 200 in 4874ms
+Error: Route "/[...slug]" used `params.slug`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CatchAllPage (src/app/[...slug]/page.tsx:29:18)
+  27 |
+  28 | export default async function CatchAllPage({ params }: Props) {
+> 29 |   const slugArr = params?.slug || []
+     |                  ^
+  30 |   // if root (no slug) let the index route handle it
+  31 |   if (slugArr.length === 0) return null
+  32 |
+ GET /weather 200 in 196ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1142ms
+ GET /favicon.ico?favicon.ed0b7053.ico 200 in 1472ms
