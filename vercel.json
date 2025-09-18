@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/bioflow/:path*", "destination": "/bioflow/index.html" },
+    { "source": "/danonino/:path*", "destination": "/danonino/index.html" },
+    { "source": "/lumi/:path*", "destination": "/lumi/index.html" },
+    { "source": "/odin/:path*", "destination": "/odin/index.html" },
+    { "source": "/valuetriangle/:path*", "destination": "/valuetriangle/index.html" },
+    { "source": "/weather/:path*", "destination": "/weather/index.html" }
+  ]
+}
