@@ -74,9 +74,15 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {link.name}
-                    </Link>
+                    {link.href.startsWith('/') ? (
+                      <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors" target={link.href.startsWith('http') ? '_self' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
